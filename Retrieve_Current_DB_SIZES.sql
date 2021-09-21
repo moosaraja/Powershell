@@ -1,11 +1,11 @@
 /************************************************************
  * Code formatted by 
- *			SoftTree SQL Assistant © v7.0.158
+ *			SoftTree SQL Assistant Â© v7.0.158
  * Time: 	16.09.2015 13:04:07
  *
  * Code content is copyright of 
- * 			John Ness, ITP52, Bühler AG, Uzwil
- * 			©John Ness, 2015 - 2018
+ * 			Moosa Raja
+ * 			Â©Moosa Raja, 2015 - 2018
  * Modified by moosa to correct the null issue on Oct 2019
  * unless stated otherwised
  *
@@ -152,7 +152,6 @@ ORDER BY
        3 
        --compute SUM(DBS_Total_Used_MB), SUM(DBS_Total_MB_Max)
        --AS SUM_DBS_Total_Used_MB
-       --!!DIR \\UZN893\d$ /s
        -----------------------------------------------------------------
        -- in progress don't use
        -----------------------------------------------------------------
@@ -179,7 +178,6 @@ ORDER BY
        AND MAX_size != -1
        AND max_size != 268435456
        
-       -- !!DIR \\UZN893\d$ /s       
        */
        -----------------------------------------------------------------
        -- Sum computable requirements for disk drive *.ldf
@@ -192,7 +190,6 @@ ORDER BY
        AND MAX_size != -1
        AND max_size != 268435456
        
-       -- !!DIR \\UZN556\d$ /s       
        */ 
        -----------------------------------------------------------------
        -- Computable requirements for all disk drives *.mdf & *.ldf
@@ -214,38 +211,4 @@ ORDER BY
        SELECT *
        FROM   sys.master_files mf
        WHERE  DB_NAME(mf.database_id) = 'tempdb'
-       
-       SELECT * FROM sys.database_files 
-       
-       SELECT 14417920 + 1310720
-
-	   sp_helpdb SP01_Content_WA1_05
-	   xp_fixeddrives
-
-       ALTER DATABASE IbsBtsManagement MODIFY FILE(NAME = IbsBtsManagement, SIZE=32GB,MAXSIZE = 32GB)        
-	   ALTER DATABASE tempdb MODIFY FILE(NAME = temp3, SIZE=1GB)        
-	   ALTER DATABASE tempdb MODIFY FILE(NAME = temp4, SIZE=1GB)        
-	   ALTER DATABASE tempdb MODIFY FILE(NAME = temp5, SIZE=1GB)        
-	   ALTER DATABASE tempdb MODIFY FILE(NAME = temp6, SIZE=1GB)        
-	   ALTER DATABASE tempdb MODIFY FILE(NAME = temp7, SIZE=1GB)        
-	   ALTER DATABASE tempdb MODIFY FILE(NAME = temp2, SIZE=1GB)        
-	   ALTER DATABASE tempdb MODIFY FILE(NAME = temp8, SIZE=1GB)        
-       ALTER DATABASE msdb MODIFY FILE(NAME = MSDBLog, SIZE=2GB,MAXSIZE = 2GB)        
-
-	   	   sp_helpdb tempdb
-
-	   xp_fixeddrives
-	   D:\MSSQL\OLTP\DATA\D3Q\data\d3_usr_01.ndf
        */
-
-
-
-
-
-
-	   
-	   
-
-	   --select (440239 + 37217+ 231239+13933)/1024
-
-	   --select (756800 + 71680+ 307200+16384)/1024
