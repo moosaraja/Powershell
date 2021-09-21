@@ -1,4 +1,4 @@
-#This file is to get SYSadmin priveleges users from all the servers in the DBSize file
+#This file is to get all DB Size in the given servers 
 #Please create a folder in C: Drive as PS to execute this PS File
 #Please execute this file through Admin Account
 
