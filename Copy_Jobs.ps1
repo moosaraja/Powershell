@@ -18,7 +18,7 @@ write-host $JobName
 
 if ($JobName -eq '')
 {
-	$ExcludeJobName = Read-Host "Need to exclude any jobs"
+	$ExcludeJobName = Read-Host "Need to exclude any job"
 	write-host $ExcludeJobName 
 	if ($ExcludeJobName -eq '')
 	{
