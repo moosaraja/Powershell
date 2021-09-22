@@ -4,9 +4,9 @@
 # Creation Date: 21.09.2021
 #  How to use this powershell script:
 #    - Launch SQL Server PowerShell ( Start -> Run -> sqlps.exe)
-#    - Copy the following powershell script and save to file (Ex c:\ps\Copy_logins.ps1)
-#    - in SQL powershell window, type in script file path ( Ex: c:\ps\Copy_logins.ps1) to run the script
-#    - or SQL powershell window, just run the .\copy_logins.ps1 and press enter. 
+#    - Copy the following powershell script and save to file (Ex c:\ps\Copy_jobs.ps1)
+#    - in SQL powershell window, type in script file path ( Ex: c:\ps\Copy_jobs.ps1) to run the script
+#    - or SQL powershell window, just run the .\copy_jobs.ps1 and press enter. 
 ###########################################################################################
 
 $Sourceserver = Read-Host "Enter Source Server Name"
@@ -18,7 +18,7 @@ write-host $JobName
 
 if ($JobName -eq '')
 {
-	$ExcludeJobName = Read-Host "Need to exclude any job"
+	$ExcludeJobName = Read-Host "Need to exclude any jobs"
 	write-host $ExcludeJobName 
 	if ($ExcludeJobName -eq '')
 	{
@@ -37,7 +37,7 @@ else
 {
 	write-host "Staring migration of Job "$JobName
 	Copy-DbaAgentJob -Source $Sourceserver -Destination $DestinationServer -Job $JobName -Force
-	write-host "login " $JobName " Migrated Successfully"
+	write-host "Job " $JobName " Migrated Successfully"
 	
 }
 
